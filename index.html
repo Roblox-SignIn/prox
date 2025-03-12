@@ -1,0 +1,28 @@
+!DOCTYPE html
+html lang=en
+head
+  meta charset=UTF-8
+  meta name=viewport content=width=device-width, initial-scale=1.0
+  titleProxy Servertitle
+head
+body
+
+  h1Welcome to the Proxy Serverh1
+  pThis proxy runs Google within. Enter a search term in the search bar to start browsing.p
+
+  !-- Optionally, include a search form if you want to allow searches --
+  form action=search method=GET
+    input type=text name=q placeholder=Enter search term...
+    button type=submitSearchbutton
+  form
+
+  !-- Displaying the current URL to help users understand where they are --
+  pCurrent URL span id=currentUrlspanp
+
+  script
+     Dynamically update the current URL (just for demonstration)
+    document.getElementById('currentUrl').textContent = window.location.pathname;
+  script
+
+body
+html
